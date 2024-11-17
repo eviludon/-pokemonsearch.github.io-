@@ -1,0 +1,256 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100dvh;
+}
+
+:root {
+    --fbc-blue-70: #003eaa; /* Dark blue (Pokémon blue) */
+    --fbc-gray-20: #ededf0;
+    --fbc-light-gray: #f0f0f4;
+    --fbc-white: #ffffff;
+    --fbc-transition: all 0.15s cubic-bezier(0.07, 0.95, 0, 1);
+    --fbc-borders: 1px solid #ededf0;
+    --fbc-primary-text: #15141a;
+    --fbc-secondary-text: #86868f;
+    
+    /* Pokémon-inspired colors */
+    --poke-red: #ff0000;  /* Red (Pokéball red) */
+    --poke-yellow: #ffcc00; /* Yellow (Pikachu yellow) */
+    --poke-blue: #007bff; /* Blue (Squirtle blue) */
+    --poke-green: #1dbf73; /* Green (Bulbasaur green) */
+    --poke-orange: #ff7300; /* Orange (Charmander orange) */
+    --poke-purple: #9c27b0; /* Purple (Mewtwo purple) */
+    --poke-pink: #f06292; /* Pink (Jigglypuff pink) */
+    --poke-brown: #8b4513; /* Brown (Eevee brown) */
+    --poke-gray: #bdbdbd; /* Gray (Pikachu's cheeks) */
+    --poke-light-gray: #e3f2fd; /* Light gray */
+}
+
+body {
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    background: var(--poke-blue); /* Blue (Squirtle blue) */
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.5em;
+    color: var(--poke-orange); /* Charmander's orange color */
+    text-shadow: 1px 1px 2px black;
+}
+
+.container {
+    padding: 1em;
+    border-radius: 0.5em;
+    background: var(--poke-yellow); /* Container background is now black */
+    border: 5px solid black;
+}
+
+.container form {
+    background: black; /* Form area also set to black */
+    color: var(--fbc-white); /* Text color inside form will be white */
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.container form label {
+    display: block;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 2.5em;
+    color: var(--poke-yellow); /* Label color set to yellow */
+}
+
+.container form input {
+    padding: 0.48em 0.24em;
+    font-weight: 500;
+    font-size: 1.14rem;
+    border-radius: 0.25em;
+    border: 1px solid var(--poke-gray);
+    outline: none;
+    background: var(--fbc-white); /* Input background color remains white for contrast */
+}
+
+.container form button {
+    padding: 8px 16px;
+    font-size: 1.125rem;
+    border: 2px solid transparent;
+    border-radius: 1.5em;
+    background: var(--poke-yellow);
+    color: var(--poke-blue);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#basestats {
+    background-color: black;
+}
+
+.container form button:hover {
+    background: var(--poke-red);
+    color: #fff;
+}
+
+.top-container, .bottom-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 325px;
+}
+
+.top-container {
+    background: black;
+    padding: 10px;
+    margin-block: .8em;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: var(--poke-orange); /* Orange for Charmander-inspired background */
+    color: var(--fbc-white);
+    margin-block: .8em;
+}
+
+tr {
+    border-bottom: 5px solid black; /* Changed from white to black */
+}
+
+td, th {
+    text-align: center;
+    padding: 8px;
+}
+
+th:nth-child(2n), td:nth-child(2n) {
+    border-left: 5px solid black; /* Changed from white to black */
+}
+
+img {
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: auto;
+    margin-block: .24em;
+}
+
+.name-and-id {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--poke-yellow); /* Highlight Pokémon name in yellow */
+}
+
+.size {
+    font-size: 1.025rem;
+}
+
+#type {
+    font-weight: 400;
+    font-size: .8rem;
+}
+
+.type {
+    padding: .2em .4em;
+    border-radius: .25em;
+    margin-left: .25em;
+    font-weight: 400;
+    color: var(--fbc-white);
+}
+
+span {
+    color: white; /*height & weight*/
+}
+
+/* Pokémon Type colors */
+.normal {
+    background-color: #b7b7aa; /* Normal type - neutral color */
+}
+
+.fire {
+    background-color: var(--poke-red); /* Fire type - red */
+}
+
+.water {
+    background-color: var(--poke-blue); /* Water type - blue */
+}
+
+.electric {
+    background-color: var(--poke-yellow); /* Electric type - yellow */
+}
+
+.grass {
+    background-color: var(--poke-green); /* Grass type - green */
+}
+
+.ice {
+    background-color: #66ccfe; /* Ice type - icy blue */
+}
+
+.fighting {
+    background-color: #d3887e; /* Fighting type - earthy brown */
+}
+
+.poison {
+    background-color: var(--poke-purple); /* Poison type - purple */
+}
+
+.ground {
+    background-color: #dfba52; /* Ground type - earthy gold */
+}
+
+.flying {
+    background-color: #8899ff; /* Flying type - sky blue */
+}
+
+.psychic {
+    background-color: var(--poke-pink); /* Psychic type - pink */
+}
+
+.bug {
+    background-color: #aabb23; /* Bug type - insect green */
+}
+
+.rock {
+    background-color: #baaa66; /* Rock type - rocky brown */
+}
+
+.ghost {
+    background-color: #9995d0; /* Ghost type - spooky purple */
+}
+
+.dragon {
+    background-color: var(--poke-purple); /* Dragon type - purple */
+}
+
+.dark {
+    background-color: #b59682; /* Dark type - brownish */
+}
+
+.steel {
+    background-color: #abaabb; /* Steel type - metallic gray */
+}
+
+.fairy {
+    background-color: var(--poke-pink); /* Fairy type - soft pink */
+}
+
+/* Add a few Pokémon-themed hover effects */
+.type:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+button:focus, input:focus {
+    outline: 2px solid var(--poke-blue); /* Blue outline on focus for clarity */
+}
